@@ -32,6 +32,7 @@ spec:
     metadata:
       labels:
         name: mongodb # has to match .spec.selector.matchLabels
+        tier: db
     spec:
       terminationGracePeriodSeconds: 10
       containers:
