@@ -37,6 +37,11 @@ spec:
       containers:
       - name: mysql
         image: sahiya/mysql:v2
+        envFrom:
+        - configMapRef:
+            name: mysql-config
+        - secretRef:
+             name: mysql-secret
         ports:
         - containerPort: 27017
           name: mysql
