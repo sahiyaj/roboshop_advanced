@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: nginx-conf
+  name: nginx-config
 data:
   nnginx.conf: |
     # this config is loading from nginx config map
@@ -87,15 +87,15 @@ spec:
         imagePullPolicy: Always
         image: sahiya/web:k8
         volumeMounts:
-        - name: nginx-conf
+        - name: nginx-config
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
         ports:
         - containerPort: 80
       volumes:
-      - name: nginx-conf
+      - name: nginx-config
         configMap:
-          name: nginx-conf
+          name: nginx-config
           items:
             - key: nginx.conf
               path: nginx.conf  
