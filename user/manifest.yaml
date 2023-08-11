@@ -30,7 +30,7 @@ spec:
       containers:
       - name: user
         imagePullPolicy: Always
-        image: sahiya/user:k8
+        image: sahiya/user:v2
         envFrom:
         - configMapRef:
             name: user-config
