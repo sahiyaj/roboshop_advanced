@@ -17,10 +17,10 @@ metadata:
     tier: app
 spec:
   replicas: 1
-  selector: 
+  selector:
     matchLabels:
       name: catalogue
-      tier: app  
+      tier: app
   template:
     metadata:
       labels:
@@ -30,7 +30,7 @@ spec:
       containers:
       - name: catalogue
         imagePullPolicy: Always
-        image: sahiya/catalogue:k8
+        image: techworldwithsiva/catalogue:v1
         envFrom:
         - configMapRef:
             name: catalogue-config
@@ -45,7 +45,7 @@ metadata:
 spec:
   selector:
     name: catalogue
-    tier: name
+    tier: app
   ports:
     - protocol: TCP
       port: 80
