@@ -5,7 +5,7 @@ metadata:
   name: catalogue-config
   namespace: roboshop
 data:
-  MONGO_URL: "mongodb://mongodb:80/catalogue"
+  MONGO_URL: "mongodb://mongodb:27017/catalogue"
 ---
 apiVersion: apps/v1
 kind: Deployment
