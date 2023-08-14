@@ -39,6 +39,8 @@ spec:
       - name: mysql
         imagePullPolicy: Always
         image: sahiya/mysql:v2
+        args:
+        - "--ignore-db-dir=lost+found"
         envFrom:
         - configMapRef:
            name: mysql-config
