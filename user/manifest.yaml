@@ -45,7 +45,7 @@ metadata:
 spec:
   selector:
     name: user
-    tier: name
+    tier: app
   ports:
     - protocol: TCP
       port: 80
