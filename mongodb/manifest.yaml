@@ -10,7 +10,7 @@ spec:
   ports:
   - port: 27017
     name: mongodb
-  clusterIP: None # headless service
+  clusterIP: None #headless service
   selector:
     name: mongodb
     tier: db
@@ -23,14 +23,14 @@ metadata:
 spec:
   selector:
     matchLabels:
-       name: mongodb
-       tier: db
+      name: mongodb # has to match .spec.template.metadata.labels
+      tier: db
   serviceName: "mongodb"
   replicas: 1 # by default is 1
   template:
     metadata:
       labels:
-        name: mongodb # has to match .spec.selector.matchLabels
+        name: mongodb # has to match .spec.template.metadata.labels
         tier: db
     spec:
       containers:
@@ -50,4 +50,4 @@ spec:
       storageClassName: "ebs-sc"
       resources:
         requests:
-          storage: 1Gi  
+          storage: 1Gi
