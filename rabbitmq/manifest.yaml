@@ -24,7 +24,7 @@ spec:
       name: rabbitmq # has to match .spec.template.metadata.labels
       tier: db
   serviceName: "rabbitmq"
-  replicas: 2 # by default is 1
+  replicas: 1 # by default is 1
   template:
     metadata:
       labels:

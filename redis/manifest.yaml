@@ -25,7 +25,7 @@ spec:
       name: redis # has to match .spec.template.metadata.labels
       tier: db
   serviceName: "redis"
-  replicas: 2 # by default is 1
+  replicas: 1 # by default is 1
   template:
     metadata:
       labels:
