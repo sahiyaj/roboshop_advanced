@@ -41,7 +41,7 @@ spec:
           name: redis
         volumeMounts:
         - name: redis-volume
-          mountPath: home/ec2-user/redis
+          mountPath: /data
   volumeClaimTemplates:
   - metadata:
       name: redis-volume
