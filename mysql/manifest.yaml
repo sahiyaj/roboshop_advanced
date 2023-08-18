@@ -60,7 +60,7 @@ spec:
         - "--ignore-db-dir=lost+found"
         envFrom:
         - configMapRef:
-           name: mysql-config
+          name: mysql-config
         - secretRef:
           name: mysql-secret
         ports:
